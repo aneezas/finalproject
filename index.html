@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+          <meta charset="utf-8">
+          <meta name="Canvas Redesign" content="Individual Canvas Page Redesign">
+          <title>BATECH 189 Final Project - Aneeza Ijaz</title>
+          <link rel="stylesheet" href="style.css">
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</head>
+<body>      
+    <h1>Learning Resources: The CSS Box Model - Aneeza's Page</h1>
+<p>Are you still with me? If so, congrats! We are about to step it up a bit with CSS over the next few weeks, and learn some more HTML in the process. Let's see where things take us.</p>
+<h2>Read/Review:</h2>
+<ul>
+  <li>Chapter 13: Colors and Background (page 303)</li>
+  <li>Chapter 14: Thinking Inside the Box (page 355)</li>
+  <li><a href="https://docs.google.com/presentation/d/1k-BkzyeM-hc8jNlhO7PezrQFWO293KT5PF-WvuOyeh4/edit?usp=sharing">Presentation on CSS Basics</a></li>
+</ul>
+<h2>CSS Box Model</h2>
+<p>To understand CSS layout, you must grasp the concept that every HTML element is considered a box with the following four properties:</p>
+<ul>
+  <li>Margin</li>
+  <li>Border</li>
+  <li>Padding</li>
+  <li>Content </li>
+</ul>
+<p>So, how can this "box" idea help us style our web pages?&nbsp;</p>
+<p>Well, remember that CSS code works by first <em>specifying an HTML element that you wish to change the appearance of</em>. This is called the <strong>"selector."</strong>&nbsp;</p>
+<p>Then you add the curly brackets to contain the style <strong>definitions.</strong> Each definition begins by naming a <strong>property</strong> of the HTML element, then giving that property a <strong>value.</strong>&nbsp;</p>
+<p>Since every HTML element is a box, then you can style at least four properties of each element -- the content, the border, the padding, and the margin.&nbsp;Elements including images, paragraphs, headings, and semantic section names (nav, main, footer, etc.) all have these four properties and can thus be styled. For example, you can change the height and width of an HTML element (among lots of other things!).</p>
+<h2>Here's an example of how to create a text box out of a paragraph element:&nbsp;</h2>
+<pre>p {<br />    border: 1px solid black;<br />    width: 500px;<br />    height: 150px;<br />}</pre>
+<p><img id="247830868" src="CSSbox1-textbox.png" alt="CSS Box Model Example 1" data-ally-user-updated-alt="CSS box model, code example 1." data-api-endpoint="https://bc.instructure.com/api/v1/courses/2528742/files/265060623" data-api-returntype="File" /></p>
+<p>Notice the thin black border that designates the paragraph's "box." This is something I do when I want to see the element I'm styling: define a border style. On busy or large pages with lots of content, I might even temporarily add some color and make the border wider so the element stands out more:&nbsp;</p>
+<pre>p {<br />    border: <strong>3px</strong> solid <strong>red</strong>;<br />    width: 500px;<br />    height: 150px;<br />}</pre>
+<p><img id="247831123" src="CSSbox2-textboxRed.png" alt="CSS Box Model Example 2" data-ally-user-updated-alt="CSS box model, code example 2." data-api-endpoint="https://bc.instructure.com/api/v1/courses/2528742/files/265060624" data-api-returntype="File" /></p>
+<p>Now, when I look at this text box, I'm feeling claustrophobic: the text content bumps right up against the border, which makes me uncomfortable and anxious.&nbsp;</p>
+<h2>Let's add some padding: padding is the space between the content and the border:&nbsp;</h2>
+<pre>p {<br />    border: 3px solid red;<br />    width: 500px;<br />    height: 150px;<br />    padding: 15px;<br />}</pre>
+<p><img id="247831689" src="CSSbox3-textboxRedwPadding.png" alt="CSS Box Model Example 3" data-ally-user-updated-alt="CSS box model, code example 3." data-api-endpoint="https://bc.instructure.com/api/v1/courses/2528742/files/265060622" data-api-returntype="File" /></p>
+<p>Ah, that's better: there is now some "breathing room" inside the box, between the text content and the border.&nbsp;</p>
+<p>Try adding a margin around your paragraph. How does that change the placement of the box?&nbsp;</p>
+<h2>Watch Dena's video demonstration of the Box Model</h2>
+<iframe src="https://www.youtube.com/embed/NU-a6K3S7UI" width="853" height="480" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
+<h2> Background Images</h2>
+<p>In Chapter 13 Colors and Backgrounds, Jennifer Robbins describes how to create background images. Images placed in the background of the webpage allow you to create content that sits on top of the background image. There are many different ways to use background images as specified in Chapter 5.</p>
+<p>The standard CSS property that you'll be working with is the background-image property and is generally formatted like this:</p>
+<pre>body {<br />&nbsp; &nbsp; &nbsp; background-image: url(mybackgroundimage.jpg);<br />}</pre>
+<p>It is important to take the readability (aka "legibility") of your text into account when using a background image. Sometimes you'll desperately want to use this cool image for your background, but when you use it you realize there are varying levels of light and dark within the image and that it will be very hard for you to be able to put any text content on top of the image that people would be able to read.</p>
+<h2>Some rules to think about when considering using a background image:</h2>
+<ol>
+<li>Not all images are suitable for background images</li>
+<li>Choose an image that is either all-light or all-dark; then choose a contrasting color for your text (if it is light, then your font color should be dark; if it is dark, then your font color should be light).&nbsp;</li>
+<li>Make sure the image isn't too busy</li>
+<li>Maybe you don't need an actual image, maybe you just want to have some sort of texture (see <a class="inline_disabled" href="https://www.vandelaydesign.com/best-websites-with-creative-textures/" target="_blank" rel="noopener">Vandelay Design</a> some&nbsp; examples of texture in page backgrounds).</li>
+</ol>
+<h2> Watch Dena's demonstration: How to add a background image to a web page</h2>
+<iframe src="https://www.youtube.com/embed/35rXgUjAklM" width="853" height="480" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
+<h2> Background resources: </h2>
+<ol>
+  <li>There are many free background pattern websites out there, but this is the one used in the video demonstration.&nbsp;</li>
+  <li><a href="https://www.toptal.com/designers/subtlepatterns/">Free website background patterns/images</a></li>
+  <li><a href="https://www.w3schools.com/css/css_background.asp">W3Schools Background Tutorial</a> - this has a lot of different examples of using background images in many different ways</li>
+<li>Supplemental&nbsp;Reading</li>
+</ol>
+<h2>Website Resources to Review:</h2>
+<div id="myDiv">
+<ol>
+<li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Opening the Box Model</a>, by Shay Howe&nbsp; </li>
+<li><a href="https://www.w3schools.com/css/css_boxmodel.asp">W3Schools Box Model Tutorial</a> </li>
+</ol>
+</div>
+<br>
+<!-- A button to open the popup form -->
+<button class="open-button" onclick="openForm()">Open Form</button>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<footer>
+&copy; 2025 by Aneeza Ijaz for BATECH 189
+</footer>
+</body>
+</html>
